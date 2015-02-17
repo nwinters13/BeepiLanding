@@ -146,6 +146,10 @@
 	font-family: "Ubuntu";
 }
 
+.promo-address {
+	font-size: 1.3vw !important;
+}
+
 .item-detail-promo {
 	width: 100%;
 	text-align: center;
@@ -158,4 +162,8 @@
 
 .item-promo {
 	padding-top: 0%;
+}
+
+.btn-promo {
+	font-size: 2vw;
 }
