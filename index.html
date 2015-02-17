@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BeepiLandingPage">
+    <meta name="author" content="Nate Winters">
+    
+    <title>Beepi | San Diego</title>
+
+    <!--Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:700,400|Ubuntu|Raleway:400,500' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Our CSS (modified by me) -->
+    <link href="css/landing.css" rel="stylesheet">
+    <link href="css/panes.css" rel="stylesheet">
+    <link href="css/toolbar.css" rel="stylesheet">
+    <link href="css/sprites.css" rel="stylesheet">
+    
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script src="js/maplabel-compiled.js"></script>
+    <script src="js/makeMap.js"></script>
+    <script src="js/landing.js"></script>
+</head>
+
+<body onload="initialize()">
+    <!-- top navbar with links to beepi site -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+                <a class="navbar-brand" href="https://www.beepi.com/"> 
+                    <img id="nav-icon" alt="Brand" src="css/images/beepi_iso.png">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About Beepi<span class="sr-only">(current)</span></a></li>
+                    <li><a href="https://www.beepi.com/TopFiveQuestions/">Top 5 Questions</a></li>
+                    <li><a href="https://www.beepi.com/Buy">Buy</a></li>
+                    <li><a href="https://www.beepi.com/Sell">Sell</a></li>
+                    <li><a href="https://www.beepi.com/About#jobs">Join the crew</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- beepi logo and san diego header -->
+    <div class="brand-image">
+        <img src="css/images/beepi_wide.png">
+    </div>
+    <div class="brand-expansion">
+        San Diego
+    </div>
+    <!-- Contains all of the information for the landing page -->
+    <div id="map">
+        <!-- The pane on the map with info about Beepi -->
+        <div class="map-pane" id="about-pane">
+            <div class="map-title about-title">
+                More than a lot better.
+            </div>
+            <div class="map-content">
+                <div class="content-reasons-about">
+                    <div class="item-empty"></div>
+                    <div class="item-about border">
+                        <div class="sprite-about sprite-about-1"></div>
+                        <div class="item-detail-about">
+                            A <span class="green-text">better price</span>. Always.
+                        </div>
+                    </div>
+                    <div class="item-about border">
+                        <div class="sprite-about sprite-about-2"></div>
+                        <div class="item-detail-about">
+                            No secrets, no pushing,<span class="green-text"> no middleman</span>.
+                        </div>
+                    </div>
+                    <div class="item-about">
+                        <div class="sprite-about sprite-about-3"></div>
+                        <div class="item-detail-about">
+                            <span class="green-text">Fast and easy</span> from start to finish.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The pane on the map with information about buying a car -->
+        <div class="map-pane" id="buy-pane">
+            <div class="map-title buy-title">
+                BUY WITH BEEPI. ANYWHERE.
+            </div>
+            <div class="map-content">
+                <div class="content-reasons">
+                    <div class="item-empty"></div>
+                    <div class="item">
+                        <div class="sprite sprite-buy-1"></div>
+                        <div class="item-detail">
+                            Don't worry. You get a 10-day <span class="green-text">money back guarantee.</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="sprite sprite-buy-2"></div>
+                        <div class="item-detail">
+                            Drive safe. Every car passes our <span class="green-text">185-point inspection.</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="sprite sprite-buy-3"></div>
+                        <div class="item-detail">
+                            Sit back and relax. <span class="green-text">We deliver</span> right to your doorstep.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The pane on the map with information about selling your car in San Diego
+                also contains the button to get to the map that shows ZIP code sale zones -->
+        <div class="map-pane" id="sell-pane">
+            <div class="map-title sell-title">
+                SELL WITH BEEPI
+            </div>
+            <div class="map-content">
+                <div class="content-reasons">
+                    <div class="item-empty"></div>
+                    <div class="item">
+                       <div class="sprite sprite-sell-1"></div>
+                        <div class="item-detail">
+                            Get more than trade in offers, guaranteed!
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="sprite sprite-sell-2"></div>
+                        <div class="item-detail">
+                            Your car sells in 30 days, or we'll buy it.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="sprite sprite-sell-3"></div>
+                        <div class="item-detail">
+                            We handle the paperwork, so you don't have to.
+                        </div>
+                    </div>
+                    <div class="map-button">
+                        <button type="button" class="btn btn-default btn-lg" id="sell-btn" onclick="showPane('map-canvas');showZipCodes();resetBtns();">
+                            Locate an inspector in San Diego
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- The pane on the map with the promotional information -->
+        <div class="map-pane" id="promo-pane">
+            <div class="map-title promo-title">
+                LAUNCH PARTY
+            </div>
+            <div class="map-content">
+                <div class="promo-content-header">
+                    come learn more about beepi san diego
+                </div>
+                <div class="content-reasons-about">
+                    <div class="item-empty"></div>
+                    <div class="item-about item-promo border-white">
+                        <div class="item-detail-promo">
+                            <p>February 27, 2015</p>
+                            <p class="blue-text">7 P.M.</p>
+                        </div>
+                    </div>
+                    <div class="item-about item-promo border-white">
+                        <div class="item-detail-promo">
+                            <button type="button" class="btn btn-default btn-lg btn-promo" id="sell-btn" onclick="showPane('map-canvas');showPins();resetBtns();">
+                                COME FIND US
+                        </button>
+                        </div>
+                    </div>
+                    <div class="item-about item-promo">
+                        <div class="item-detail-promo">
+                            <p class="blue-text">FOOD</p>
+                            <p>FUN</p>
+                            <p class="blue-text">PRIZES</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The actual map itself -->
+        <div id="map-canvas"></div>
+    </div>
+
+    <!-- The button toolbar below the map to navigate between panes -->
+    <div class="btn-toolbar btn-toolbar-map btn-inverse" role="toolbar">
+        <div class="btn-group btn-pane" role="group">
+            <button id="btn-about" type="button" class="btn btn-default btn-map-select" onclick="showPane('about-pane');modifyBtn('btn-about');">
+                ABOUT
+            </button>
+        </div>
+        <div class="btn-group btn-pane" role="group">
+            <button id="btn-buy" type="button" class="btn btn-default btn-map-select" onclick="showPane('buy-pane');modifyBtn('btn-buy');">
+                BUY
+            </button>
+        </div>
+        <div class="btn-group btn-pane" role="group">
+            <button id="btn-sell" type="button" class="btn btn-default btn-map-select" onclick="showPane('sell-pane');modifyBtn('btn-sell')">
+                SELL
+            </button>
+        </div>
+        <div class="btn-group btn-pane" role="group">
+            <button id="btn-promo" type="button" class="btn btn-default btn-map-select btn-selected" onclick="showPane('promo-pane');modifyBtn('btn-promo');">
+                BEEPI IN SAN DIEGO
+            </button>
+        </div>
+    </div>
+</body>
