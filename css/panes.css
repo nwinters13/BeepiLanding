@@ -36,6 +36,7 @@
 
 #sell-btn {
 	padding-bottom: 2%;
+	font-size: 2vmin;
 }
 
 #promo-pane {
@@ -77,6 +78,10 @@
 
 .item-empty {
 	height: 5%;
+}
+
+.item-empty-lg {
+	height: 20%;
 }
 
 .item {
@@ -168,7 +173,8 @@
 
 
 .btn-promo {
-	font-size: 2vw;
+	font-size: 2.5vmin !important;
+	white-space: nowrap;
 }
 
 .mini-brand {
